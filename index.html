@@ -41,15 +41,182 @@
         <input type="checkbox" id="terms" required>
         <span>I agree to Fyle's terms and conditions, and provide consent to send me communication.</span>
       </div>
-      <button type="submit"  class="btn"  onclick="closeForm()">Contact Us</button>
-     
+      <button type="submit" class="btn">Contact Us</button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     </form>
   </div>
-  <div class="service">
-    <h1>WHAT WE DO </h1>
-    <h2>SERVICE PROVIDE FOR YOU</h2>
-  </div>
 
-  <script src="script.js"></script>
+  <div class="service">
+    <h1>WHAT WE DO</h1>
+    <h2>SERVICE PROVIDE FOR YOU</h2>
+    <div class="service-item">
+      <div class="service-content">
+        <div class="image-wrapper">
+          <img src="image1.png" alt="Service Image">
+          <div class="hover-content">
+            <h3>WEB DEVELOPMENT</h3>
+            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+            <button class="read-more" onclick="openLink()">READ MORE</button>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <div class="image-wrapper">
+          <img src="image2.png" alt="Service Image">
+          <div class="hover-content">
+            <h3>WEB DEVELOPMENT</h3>
+            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+            <button class="read-more" onclick="openLink()">READ MORE</button>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <div class="image-wrapper">
+          <img src="image3.png" alt="Service Image">
+          <div class="hover-content">
+            <h3>WEB DEVELOPMENT</h3>
+            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+            <button class="read-more" onclick="openLink()">READ MORE</button>
+          </div>
+        </div>
+      </div>
+      <div class="service-content">
+        <div class="image-wrapper">
+          <img src="image4.jpeg" alt="Service Image">
+          <div class="hover-content">
+            <h3>WEB DEVELOPMENT</h3>
+            <p>Morbi sed lacus nec risus finibus feugiat et fermentum nibh. Pellentesque</p>
+            <button class="read-more" onclick="openLink()">READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+ 
+  <div class="project">
+    <h2>OUR PROJECT</h2>
+    <h1>WHY WE ARE BEST</h1>
+  
+    <div class="project-content">
+      <div class="project-image">
+        <img id="projectImage" src="image5.png" alt="Project Image">
+      </div>
+      <div class="project-details">
+        <div class="project-item" data-image="image6.jpeg">
+          <h3>Genderless Kei - Japan's Hot</h3>
+          <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+        </div>
+        <div class="project-item highlight" data-image="image5.png">
+          <h3>Better Strategy & Quality</h3>
+          <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+        </div>
+        <div class="project-item" data-image="image7.jpeg">
+          <h3>Genderless Kei - Japan's Hot</h3>
+          <p>Set to launch on the manufacturer's new A330neo aircraft in 2017, it's offering lots of</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="company-growth">
+    <h2 class="section-subtitle">EXPERTS GROWTS</h2>
+    <h1 class="section-title">OUR COMPANY GROWTH</h1>
+    
+    <div class="growth-stats">
+      <div class="stat-card">
+        <div class="icon">❤️</div>
+        <div class="number" data-target="199">0</div>
+        <div class="label">Staticfied Customers</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon">🕒</div>
+        <div class="number" data-target="1591">0</div>
+        <div class="label">Days Of Operation</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon">✅</div>
+        <div class="number" data-target="283">0</div>
+        <div class="label">Complete Project</div>
+      </div>
+      <div class="stat-card">
+        <div class="icon">🏆</div>
+        <div class="number" data-target="75">0</div>
+        <div class="label">Win Awards</div>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+
+ 
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const numbers = document.querySelectorAll('.number');
+  
+  const animateNumber = (element) => {
+    const target = parseInt(element.getAttribute('data-target'));
+    let count = 0;
+    const duration = 2000; 
+    const step = target / (duration / 16);
+
+    const updateNumber = () => {
+      count += step;
+      if (count < target) {
+        element.innerText = Math.floor(count);
+        requestAnimationFrame(updateNumber);
+      } else {
+        element.innerText = target + '+';
+      }
+    };
+
+    updateNumber();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateNumber(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  numbers.forEach(number => observer.observe(number));
+});
+  function openForm() {
+    document.getElementById("contactForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("contactForm").style.display = "none";
+  }
+
+  function openLink() {
+    window.open('https://fylehq.com', '_blank');
+  }
+
+  document.querySelectorAll('.image-wrapper').forEach((wrapper, index) => {
+    wrapper.addEventListener('mouseenter', () => {
+      document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+      document.querySelectorAll('.dot')[index].classList.add('active');
+    });
+  });
+  document.querySelectorAll('.project-item').forEach(item => {
+    item.addEventListener('click', () => {
+      
+      document.getElementById('projectImage').src = item.dataset.image;
+      
+    
+      document.querySelectorAll('.project-item').forEach(i => i.classList.remove('highlight'));
+      item.classList.add('highlight');
+    });
+  });
+</script>
 </html>
