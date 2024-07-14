@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 700px;
+  height:300px;
+}
+
+.award-winning {
+  color: #FF0000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact-us {
+  background-color: #E53E3E;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-us:hover {
+  background-color: #C53030;
+}
+
+.image-container img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 1;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #2D3748;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #4A5568;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #CBD5E0;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #2D3748;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4C51BF;
+  box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.2);
+}
+
+.form-checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-checkbox-group input {
+  margin-right: 8px;
+}
+
+.form-checkbox-group span {
+  color: #4A5568;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #E53E3E;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #C53030;
+}
+
+.btn.cancel {
+  background-color: #718096;
+  margin-top: 8px;
+}
+
+.btn.cancel:hover {
+  background-color: #4A5568;
+}
+
+.service {
+  height: 100vh;
+  width: 100vw;
+}

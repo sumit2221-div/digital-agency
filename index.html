@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Marketing Agency</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h2 class="award-winning">AWARD WINNING</h2>
+      <h1 class="title">DIGITAL MARKETING AGENCY</h1>
+      <p class="description">
+        Morbi sed lacus nec risus finibus feugiat at fermentum nibh. Pellentesque vitae ante at elit fringilla ac at purus.
+        Morbi sed lacus nec risus finibus feugiat at fermentum.
+      </p>
+      <button class="contact-us" onclick="openForm()">CONTACT US</button>
+    </div>
+    <div class="image-container">
+      <img src="Screen_Shot_2021-08-10_at_7.16.53_PM.png" alt="Digital Marketing">
+    </div>
+  </div>
+
+  <div class="form-popup" id="contactForm">
+    <form class="form-container" action="https://getform.io/f/amdpdlwb" method="post">
+      <h2>Talk to US</h2>
+      <div class="form-group">
+        <label for="work-email">Work email*</label>
+        <input type="email" id="work-email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="first-name">First name*</label>
+        <input type="text" id="first-name" name="first_name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last name*</label>
+        <input type="text" id="last-name" name="last_name" required>
+      </div>
+      <div class="form-checkbox-group">
+        <input type="checkbox" id="terms" required>
+        <span>I agree to Fyle's terms and conditions, and provide consent to send me communication.</span>
+      </div>
+      <button type="submit"  class="btn"  onclick="closeForm()">Contact Us</button>
+     
+    </form>
+  </div>
+  <div class="service">
+    <h1>WHAT WE DO </h1>
+    <h2>SERVICE PROVIDE FOR YOU</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
