@@ -23,26 +23,34 @@
   </div>
 
   <div class="form-popup" id="contactForm">
+    <button type="button" class="cancel" onclick="closeForm()">&times;</button>
+  
     <form class="form-container" action="https://getform.io/f/amdpdlwb" method="post">
       <h2>Talk to US</h2>
-      <div class="form-group">
-        <label for="work-email">Work email*</label>
-        <input type="email" id="work-email" name="email" required>
+      <div class="form-row">
+       
+        <div class="form-group">
+          <input type="email" id="work-email" name="email" required placeholder=" ">
+          <label for="work-email" class="floating-label">Work email*</label>
+        </div>
+        <div class="input-row">
+        <div class="form-group">
+          <input type="text" id="first-name" name="first_name" required placeholder=" ">
+          <label for="first-name" class="floating-label">First name*</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="last-name" name="last_name" required placeholder=" ">
+          <label for="last-name" class="floating-label">last name*</label>
+        </div>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="first-name">First name*</label>
-        <input type="text" id="first-name" name="first_name" required>
-      </div>
-      <div class="form-group">
-        <label for="last-name">Last name*</label>
-        <input type="text" id="last-name" name="last_name" required>
-      </div>
+      
       <div class="form-checkbox-group">
         <input type="checkbox" id="terms" required>
         <span>I agree to Fyle's terms and conditions, and provide consent to send me communication.</span>
       </div>
       <button type="submit" class="btn">Contact Us</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+     
     </form>
   </div>
 
@@ -98,6 +106,35 @@
       <span class="dot"></span>
     </div>
   </div>
+  <section class="why-choose-us">
+    <h2 class="section-subtitle">WHY CHOOSE US</h2>
+    <h1 class="section-title">WHY WE ARE BEST</h1>
+    
+    <div class="features">
+      <div class="feature">
+        <img src="target-icon.png" alt="Clarified Vision & Target" class="feature-icon">
+        <h3>Clarified Vision & Target</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+      </div>
+      <div class="feature">
+        <img src="clock-icon.png" alt="High Performance" class="feature-icon">
+        <h3>High Performance</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+      </div>
+      <div class="feature">
+        <img src="lock-icon.png" alt="Maintain Security" class="feature-icon">
+        <h3>Maintain Security</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+      </div>
+      <div class="feature">
+        <img src="strategy-icon.png" alt="Better Strategy & Quality" class="feature-icon">
+        <h3>Better Strategy & Quality</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
+      </div>
+    </div>
+    
+  
+  </section>
  
   <div class="project">
     <h2>OUR PROJECT</h2>
@@ -150,13 +187,38 @@
       </div>
     </div>
   </section>
-  
+  <div class="feedback">
+    <h2>CLIENT'S FEEDBACK</h2>
+    <h1>PEOPLE SAY'S ABOUT US !</h1>
+    <div class="desc">
+    <p > jannat tumpa standard chunk of lorem ipsum used since the 1500s <br/>
+    reproduced below for those intrested section bonorum at malorum original.</p>
+    <div class="inline-container">
+      <h4>JANNAT TUMPA</h4>
+      <span>- COO, AMERIMAR ENTERPRISES INC.</span>
+    </div>
+    </div>
+  </div>
+  <div class="banner">
+    <img class="banner-image" src="banner.png" alt="Banner Image">
+  </div>
  
 
 
  
 </body>
 <script>
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.scrolly;
+    const sections = document.querySelectorAll('body > div, section'); 
+    const maxScroll = 400; 
+
+    sections.forEach(section => {
+        const opacity = 1 - Math.min(scrollPosition / maxScroll, 1);
+        section.style.opacity = opacity;
+    });
+});
+
   document.addEventListener('DOMContentLoaded', () => {
   const numbers = document.querySelectorAll('.number');
   
