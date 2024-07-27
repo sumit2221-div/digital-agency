@@ -1,3 +1,4 @@
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,7 +7,6 @@ body, html {
 
 .container {
   display: flex;
-
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -17,9 +17,9 @@ body, html {
 
 .content {
   max-width: 800px;
-
 }
 
+/* Text Styles */
 .award-winning {
   color: #FF0000;
   font-size: 1.2rem;
@@ -49,6 +49,7 @@ body, html {
   background-color: #C53030;
 }
 
+/* Image Styles */
 .image-container {
   display: flex;
   gap: 20px;
@@ -62,6 +63,7 @@ body, html {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Styles */
 .form-popup {
   display: none;
   position: fixed;
@@ -124,8 +126,6 @@ body, html {
   color: red; 
 }
 
-
-
 .form-checkbox-group {
   display: flex;
   align-items: center;
@@ -156,13 +156,11 @@ body, html {
 }
 
 .cancel {
-
   margin-top: 8px;
   align-items: end;
 }
 
-
-
+/* Service Section */
 .service {
   width: 100vw;
   padding: 20px;
@@ -175,13 +173,11 @@ body, html {
   margin-bottom: 20px;
   color: red;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
 }
 
 .service h2 {
   font-size: 1.5rem;
   margin-bottom: 40px;
-  
 }
 
 .service-item {
@@ -255,6 +251,7 @@ body, html {
   color: #FFFFFF;
 }
 
+/* Dots for Carousel */
 .dots {
   display: flex;
   justify-content: center;
@@ -272,11 +269,12 @@ body, html {
 }
 
 .dot.active {
-  background-color:white;
-  border: red ;
+  background-color: white;
+  border: red;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, red 0px -12px 30px, red 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+/* Project Section */
 .project {
   max-width: 1000px;
   margin: 0 auto;
@@ -337,6 +335,7 @@ body, html {
   font-size: 14px;
 }
 
+/* Company Growth Section */
 .company-growth {
   max-width: 1200px;
   margin: 0 auto;
@@ -371,7 +370,6 @@ body, html {
   transition: transform 0.3s ease;
   height: 200px;
   border-radius: 15px;
-  
 }
 
 .stat-card:hover {
@@ -395,34 +393,12 @@ body, html {
   color: #666;
 }
 
-@media (max-width: 768px) {
-  .stat-card {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .stat-card {
-    width: 100%;
-  }
-}
+/* Features Section */
 .why-choose-us {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
-}
-
-.section-subtitle {
-  color: #ff4d4d;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-size: 28px;
-  margin-bottom: 40px;
 }
 
 .features {
@@ -454,72 +430,38 @@ body, html {
   line-height: 1.5;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+  .service-content, .project-content, .growth-stats {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .stat-card {
+    width: calc(50% - 20px);
+  }
+
   .feature {
     width: calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
+  .stat-card {
+    width: 100%;
+  }
+
   .feature {
     width: 100%;
   }
-}
-.banner {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
 
-.banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .desc {
+    width: 100%;
+    left: 0;
+    padding: 20px;
+  }
 }
-
-.feedback {
-  height: 400px;
-  width: full;
-
-}
-.feedback h2 {
-  color: red;
-  text-align: center;
-}
-.feedback h1 {
-  text-align: center;
-  text-shadow: #2D3748;
-}
-.desc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
- width: 700px;
-padding: 20px;
-flex-direction: column;
-
-position: relative;
-left: 30%;
-}
-
-.desc p {
-  margin: 0;
-  text-align: center;
-}
-.desc h4 {
-  color: red;
-  text-align: start;
-  margin-right: 10px;
-}
-.inline-container {
-  display: flex; 
-  align-items: center;
-}
-
-.inline-container h3 {
-  margin-right: 10px; 
-}
-
-
-
